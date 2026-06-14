@@ -8,9 +8,9 @@ The platform also provides recruiter-side workflows for posting jobs, managing c
 
 ## Live Demo
 
-* **Frontend:** [Add your frontend live link here](https://jobsync-frontend2.onrender.com)
-* **Backend:**[ Add your backend live link here](https://jobsync-6tv7.onrender.com)
-* **GitHub Repository:** [Add your GitHub repository link here](https://github.com/PULAK04/JobSync)
+* **Frontend:** [Live](https://jobsync-frontend2.onrender.com)
+* **Backend:**[Live](https://jobsync-6tv7.onrender.com)
+* **GitHub Repository:** [Github Repo](https://github.com/PULAK04/JobSync)
 
 ---
 
