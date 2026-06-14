@@ -54,7 +54,6 @@ The platform also provides recruiter-side workflows for posting jobs, managing c
 
 * Redis Cloud integration for caching AI-generated match reports
 * Cached interview report history for faster response
-* Resume PDF download caching
 * Cache invalidation when new reports are generated
 * Reduced repeated Gemini API calls and MongoDB queries
 
@@ -234,28 +233,6 @@ User is redirected to Match Report page
 
 ---
 
-## Resume PDF Download Flow
-
-```txt
-User clicks Download Resume
-        ↓
-Backend checks Redis cache using user ID and report ID
-        ↓
-If cached PDF exists:
-        Return PDF directly from Redis
-        ↓
-If cached PDF does not exist:
-        Gemini AI generates ATS-optimized resume content
-        ↓
-PDFKit converts AI-generated content into PDF
-        ↓
-PDF is stored in Redis as Base64
-        ↓
-PDF is returned to frontend as a downloadable file
-```
-
----
-
 ## Redis Usage
 
 Redis Cloud is used to improve performance and reduce repeated expensive operations.
@@ -264,7 +241,6 @@ Redis Cloud is used to improve performance and reduce repeated expensive operati
 
 * Caching generated AI Match Reports
 * Caching user Match Report history
-* Caching generated resume PDFs
 * Reducing repeated MongoDB queries
 * Reducing repeated Gemini AI API calls
 * Improving response time for repeated downloads and report views
@@ -435,7 +411,7 @@ The system uses Gemini AI to generate ATS-optimized resume content based on the 
 
 ### Redis Caching
 
-Redis Cloud is used to cache AI reports, report history, and generated resume PDFs. This improves performance and reduces unnecessary AI API calls.
+Redis Cloud is used to cache AI reports and report history. This improves performance and reduces unnecessary AI API calls.
 
 ---
 
